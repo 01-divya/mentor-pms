@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coordinator Dashboard - Team and Mentor Allocation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <h2>Coordinator Dashboard</h2>
+            <ul>
+                <li><a href="#allocate">Allocate Mentors to Teams</a></li>
+                <li><a href="#teams">Teams</a></li>
+                <li><a href="#mentors">Mentors</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Allocation Section -->
+            <section id="allocate">
+                <h2>Allocate Mentors to Teams</h2>
+                <form id="allocation-form">
+                    <div>
+                        <label for="team">Select Team:</label>
+                        <select id="team" name="team">
+                            <!-- Teams will be populated here dynamically -->
+                        </select>
+                    </div>
+                    <div>
+                        <label for="mentor">Select Mentor:</label>
+                        <select id="mentor" name="mentor">
+                            <!-- Mentors will be populated here dynamically -->
+                        </select>
+                    </div>
+                    <button type="submit">Allocate Mentor</button>
+                </form>
+                <div id="allocation-result"></div>
+            </section>
+
+            <!-- Teams Section -->
+            <section id="teams">
+                <h2>Teams</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Team Name</th>
+                            <th>Members</th>
+                            <th>Current Mentor</th>
+                        </tr>
+                    </thead>
+                    <tbody id="team-list">
+                        <!-- Teams will be listed here dynamically -->
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Mentors Section -->
+            <section id="mentors">
+                <h2>Mentors</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Mentor Name</th>
+                            <th>Assigned Teams</th>
+                        </tr>
+                    </thead>
+                    <tbody id="mentor-list">
+                        <!-- Mentors will be listed here dynamically -->
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
